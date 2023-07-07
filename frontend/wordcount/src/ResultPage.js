@@ -9,7 +9,7 @@ function ResultPage() {
     const updatedInsight = { ...insight, favorite: !insight.favorite };
 
     axios
-      .put(`http://localhost:3001/insights/${id}/favorite`, updatedInsight)
+      .put(`https://wordcount-8s2n.onrender.com/insights/${id}/favorite`, updatedInsight)
       .then(() => {
         // Success, update the insights state
         const updatedInsights = insights.map((insight) =>
@@ -26,7 +26,7 @@ function ResultPage() {
 
   const removeInsight = (id) => {
     axios
-      .delete(`http://localhost:3001/insights/${id}`)
+      .delete(`https://wordcount-8s2n.onrender.com/insights/${id}`)
       .then((response) => {
         // Remove the insight from the insights state
         const updatedInsights = insights.filter((insight) => insight.id !== id);
@@ -40,7 +40,7 @@ function ResultPage() {
 
   const fetchInsights = () => {
     axios
-      .get("http://localhost:3001/insights")
+      .get("https://wordcount-8s2n.onrender.com/insights")
       .then((response) => {
         setInsights(response.data);
       })
@@ -50,6 +50,7 @@ function ResultPage() {
   };
 
   useEffect(() => {
+    fetchInsights();
     fetchInsights();
   }, []);
 
