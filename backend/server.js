@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 // app.use(cors);
 
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Origin", "https://64a7e4a805790656bcadee76--chattiingapp.netlify.app");
   res.setHeader(
     "Access-Control-Allow-Methods",
     "GET, POST, OPTIONS, PUT, DELETE"
