@@ -11,7 +11,7 @@ function HomePage() {
 
     try {
       // Make a POST request to the server
-      const response = await axios.post("http://localhost:3001/addinsight", {
+      const response = await axios.post("https://wordcount-8s2n.onrender.com/addinsight", {
         url,
       });
       console.log("15" + response);
